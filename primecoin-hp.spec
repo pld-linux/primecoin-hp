@@ -6,7 +6,7 @@ Version:	%{ver}.%{subver}
 Release:	1
 License:	MIT/X11
 Group:		X11/Applications
-Source0:	http://downloads.sourceforge.net/primecoin-hp/primecoin-%{version}-%{subver}.tar.bz2
+Source0:	http://downloads.sourceforge.net/primecoin-hp/%{ver}-%{subver}/primecoin-%{ver}-%{subver}.tar.bz2
 # Source0-md5:	7d323c40f536fc0b4780ec1b0ccc3b04
 URL:		http://primecoin.org
 BuildRequires:	QtCore-devel
