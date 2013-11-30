@@ -1,5 +1,5 @@
 %define	ver	0.1.2
-%define	subver	hp10
+%define	subver	hp11
 Summary:	Primecoin - First Scientific Computing Cryptocurrency
 Name:		primecoin-hp
 Version:	%{ver}.%{subver}
@@ -7,7 +7,7 @@ Release:	1
 License:	MIT/X11
 Group:		X11/Applications
 Source0:	http://downloads.sourceforge.net/primecoin-hp/%{ver}-%{subver}/primecoin-%{ver}-%{subver}.tar.bz2
-# Source0-md5:	7d323c40f536fc0b4780ec1b0ccc3b04
+# Source0-md5:	7d17123d62fe4ef6205da4775e5a3228
 URL:		http://primecoin.org
 BuildRequires:	QtCore-devel
 BuildRequires:	QtDBus-devel
