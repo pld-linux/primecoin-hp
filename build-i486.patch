@@ -1,11 +1,11 @@
---- primecoin-20131127/src/main.cpp~	2013-11-27 13:35:16.000000000 +0100
-+++ primecoin-20131127/src/main.cpp	2013-12-04 14:58:01.574592313 +0100
-@@ -4756,7 +4756,7 @@
-             }
-             else
-             {
--#ifdef __GNUC__
-+#if defined __GNUC__ && ! defined __i486__
-                 // Use atomic increment
-                 __sync_add_and_fetch(&nPrimeCounter, nPrimesHit);
-                 __sync_add_and_fetch(&nTestCounter, nTests);
+--- primecoin-0.1.2-hp14/src/prime.h~	2014-04-26 17:02:25.000000000 +0200
++++ primecoin-0.1.2-hp14/src/prime.h	2015-06-27 10:33:03.301061751 +0200
+@@ -165,7 +165,7 @@
+  * __builtin_popcountl and
+  * __sync_add_and_fetch
+  */
+-#if defined(__GNUC__) || defined(__clang__)
++#if (defined(__GNUC__) && ! defined(__i486__)) || defined(__clang__)
+ #    define USE_GCC_BUILTINS
+ #endif
+ 

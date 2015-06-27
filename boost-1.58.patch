@@ -1,0 +1,11 @@
+--- primecoin-0.1.2-hp14/src/rpcrawtransaction.cpp~	2014-04-26 17:02:25.000000000 +0200
++++ primecoin-0.1.2-hp14/src/rpcrawtransaction.cpp	2015-06-27 10:29:55.461778255 +0200
+@@ -238,7 +238,7 @@
+             CTxDestination address;
+             if (ExtractDestination(pk, address))
+             {
+-                const CScriptID& hash = boost::get<const CScriptID&>(address);
++                const CScriptID& hash = boost::get<CScriptID>(address);
+                 CScript redeemScript;
+                 if (pwalletMain->GetCScript(hash, redeemScript))
+                     entry.push_back(Pair("redeemScript", HexStr(redeemScript.begin(), redeemScript.end())));
