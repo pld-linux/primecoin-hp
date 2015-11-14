@@ -3,7 +3,7 @@
 Summary:	Primecoin - First Scientific Computing Cryptocurrency
 Name:		primecoin-hp
 Version:	%{ver}.%{subver}
-Release:	1
+Release:	2
 License:	MIT/X11
 Group:		X11/Applications
 Source0:	http://downloads.sourceforge.net/primecoin-hp/%{ver}-%{subver}/primecoin-%{ver}-%{subver}.tar.bz2
