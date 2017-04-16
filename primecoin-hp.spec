@@ -3,13 +3,14 @@
 Summary:	Primecoin - First Scientific Computing Cryptocurrency
 Name:		primecoin-hp
 Version:	%{ver}.%{subver}
-Release:	5
+Release:	6
 License:	MIT/X11
 Group:		X11/Applications
 Source0:	http://downloads.sourceforge.net/primecoin-hp/%{ver}-%{subver}/primecoin-%{ver}-%{subver}.tar.bz2
 # Source0-md5:	90115f413a3244aaf6271b1c83c0ddae
 Patch0:		build-i486.patch
 Patch1:		boost-1.58.patch
+Patch2:		miniupnpc-2.0.patch
 URL:		http://primecoin.org
 BuildRequires:	QtCore-devel
 BuildRequires:	QtDBus-devel
@@ -37,6 +38,7 @@ Qt-based Primecoin Wallet.
 %setup -q -n primecoin-%{ver}-%{subver}
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 qmake-qt4 \

@@ -1,0 +1,18 @@
+--- primecoin-0.1.2-hp14/src/net.cpp~	2014-04-26 17:02:25.000000000 +0200
++++ primecoin-0.1.2-hp14/src/net.cpp	2017-04-16 16:05:02.024093670 +0200
+@@ -1083,10 +1083,14 @@
+ #ifndef UPNPDISCOVER_SUCCESS
+     /* miniupnpc 1.5 */
+     devlist = upnpDiscover(2000, multicastif, minissdpdpath, 0);
+-#else
++#elif MINIUPNPC_API_VERSION < 14
+     /* miniupnpc 1.6 */
+     int error = 0;
+     devlist = upnpDiscover(2000, multicastif, minissdpdpath, 0, 0, &error);
++#else
++    /* miniupnpc 1.9.20150730 */
++    int error = 0;
++    devlist = upnpDiscover(2000, multicastif, minissdpdpath, 0, 0, 2, &error);
+ #endif
+ 
+     struct UPNPUrls urls;
